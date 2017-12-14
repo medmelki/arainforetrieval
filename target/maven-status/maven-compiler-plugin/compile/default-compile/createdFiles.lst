@@ -1,0 +1,11 @@
+com\indexing\User.class
+com\indexing\HibernateUtil.class
+com\textprocessing\Stemmer.class
+com\indexing\Test.class
+com\awn\db\DBAccess.class
+com\awn\ArabicWordSenseService.class
+com\indexing\SearchLib.class
+com\textprocessing\util\TextUtility.class
+com\textprocessing\POSTagger.class
+com\awn\util\BuckwalterToArabic.class
+com\awn\dao\ArabicWordSenseDao.class

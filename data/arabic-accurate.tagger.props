@@ -30,4 +30,5 @@ rareWordMinFeatureThresh = 3
                 xmlInput = 
               outputFile = 
             outputFormat = slashTags
-     outputFormatOptions = 
+     outputFormatOptions =
+

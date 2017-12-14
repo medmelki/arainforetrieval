@@ -1,5 +1,3 @@
-package com.textprocessing;
-
 import com.textprocessing.util.TextUtility;
 import org.junit.Test;
 
