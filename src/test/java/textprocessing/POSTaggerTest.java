@@ -1,3 +1,5 @@
+package textprocessing;
+
 import com.textprocessing.POSTagger;
 import org.junit.Test;
 

@@ -1,3 +1,5 @@
+package textprocessing;
+
 import com.textprocessing.Stemmer;
 import org.junit.Test;
 
