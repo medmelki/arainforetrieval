@@ -8,11 +8,10 @@ import org.hibernate.search.annotations.Store;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.UUID;
 
 @Indexed
 @Entity
@@ -20,7 +19,10 @@ import java.io.Serializable;
 public class HadithTerm implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    private String id;
+
+    @Field(index = Index.NO, analyze = Analyze.NO, store = Store.NO)
+    @Column(name = "DIDdoc")
     private Long DIDdoc;
 
     @Field(index = Index.YES, analyze = Analyze.YES, store = Store.NO)
@@ -30,6 +32,14 @@ public class HadithTerm implements Serializable {
     @Field(index = Index.YES, analyze = Analyze.YES, store = Store.NO)
     @Column(name = "cr")
     private String cr;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Long getDIDdoc() {
         return DIDdoc;
@@ -58,9 +68,20 @@ public class HadithTerm implements Serializable {
     @Override
     public String toString() {
         return "HadithTerm{" +
-                "DIDdoc=" + DIDdoc +
+                "id=" + id +
+                ", DIDdoc=" + DIDdoc +
                 ", term='" + term + '\'' +
                 ", cr='" + cr + '\'' +
                 '}';
+    }
+
+    public HadithTerm() {
+    }
+
+    public HadithTerm(Long DIDdoc, String term, String cr) {
+        this.id = UUID.randomUUID().toString();
+        this.DIDdoc = DIDdoc;
+        this.term = term;
+        this.cr = cr;
     }
 }
