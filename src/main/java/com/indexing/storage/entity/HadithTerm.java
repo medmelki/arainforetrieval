@@ -84,4 +84,24 @@ public class HadithTerm implements Serializable {
         this.term = term;
         this.cr = cr;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        HadithTerm that = (HadithTerm) o;
+
+        if (DIDdoc != null ? !DIDdoc.equals(that.DIDdoc) : that.DIDdoc != null) return false;
+        if (term != null ? !term.equals(that.term) : that.term != null) return false;
+        return cr != null ? cr.equals(that.cr) : that.cr == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = DIDdoc != null ? DIDdoc.hashCode() : 0;
+        result = 31 * result + (term != null ? term.hashCode() : 0);
+        result = 31 * result + (cr != null ? cr.hashCode() : 0);
+        return result;
+    }
 }

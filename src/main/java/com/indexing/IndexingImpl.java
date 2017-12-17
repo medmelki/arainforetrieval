@@ -3,15 +3,12 @@ package com.indexing;
 import com.indexing.storage.api.HadithStorage;
 import com.indexing.storage.entity.HadithTerm;
 import com.indexing.storage.util.HibernateUtil;
-import com.ontology.Config;
-import com.ontology.modelloader.FileOntModelLoader;
-import com.ontology.rdfstore.MySQLRDFStore;
 import com.ontology.search.OntDictionary;
 import com.ontology.search.OntMatcher;
 import com.ontology.search.OntTerm;
+import com.ontology.util.OntologyLoader;
 import com.textprocessing.Stemmer;
 import com.textprocessing.util.TextUtility;
-import org.apache.jena.ontology.OntModel;
 import org.hibernate.Session;
 
 import java.io.IOException;
@@ -20,7 +17,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -29,6 +28,8 @@ import java.util.stream.Stream;
 public class IndexingImpl {
 
     private static List<Path> filePaths = new ArrayList<>();
+
+    private static Set<HadithTerm> hadithTerms = new HashSet<>();
 
     static {
         try (Stream<Path> paths = Files.walk(Paths.get("tibb"))) {
@@ -41,7 +42,6 @@ public class IndexingImpl {
     }
 
     public static void index() {
-        Session session = HibernateUtil.getSession();
         List<String> phrases = new ArrayList<>();
         for (Path filePath : filePaths) {
             long docDID = getDocDID(filePath);
@@ -62,7 +62,7 @@ public class IndexingImpl {
                             .map(stemmer::findRoot)
                             .collect(Collectors.toList());
                     try {
-                        reasoningAndStore(words, docDID, session);
+                        reasoningAndStore(words, docDID);
                     } catch (SQLException | ClassNotFoundException e) {
                         e.printStackTrace();
                     }
@@ -71,8 +71,7 @@ public class IndexingImpl {
                 e.printStackTrace();
             }
         }
-        session.getTransaction().commit();
-        session.close();
+        storeTermsInDB();
         System.out.println("Done...");
     }
 
@@ -86,30 +85,28 @@ public class IndexingImpl {
         return Long.parseLong(docDID);
     }
 
-    private static void reasoningAndStore(List<String> words, long docDID, Session session) throws SQLException, ClassNotFoundException {
-        OntDictionary dictionary = loadOntology();
+    private static void reasoningAndStore(List<String> words, long docDID) throws SQLException, ClassNotFoundException {
+        OntDictionary dictionary = OntologyLoader.loadOntology();
         OntMatcher matcher = new OntMatcher(dictionary);
         for (String word : words) {
-            storeIndexes(word, matcher.match(word), docDID, session);
+            storeIndexes(word, matcher.match(word), docDID);
         }
     }
 
-    private static OntDictionary loadOntology() throws ClassNotFoundException, SQLException {
-        FileOntModelLoader foml = new FileOntModelLoader();
-        OntModel ontModel = foml.getOntModel(Config.ontologyFile);
 
-        //connect to the RDF store (Database)
-        MySQLRDFStore rdfStore = new MySQLRDFStore(Config.DB_URL, Config.DB_USER, Config.DB_PASSWD);
-
-        rdfStore.getModel();
-
-        return new OntDictionary(ontModel, rdfStore);
-    }
-
-    private static void storeIndexes(String word, List<OntTerm> ontTerms, long docDID, Session session) {
+    private static void storeIndexes(String word, List<OntTerm> ontTerms, long docDID) {
         for (OntTerm term : ontTerms) {
-            HadithStorage.save(new HadithTerm(docDID, term.getName(), word), session);
+            hadithTerms.add(new HadithTerm(docDID, word, term.getName()));
         }
+    }
+
+    private static void storeTermsInDB() {
+        Session session = HibernateUtil.getSession();
+        for (HadithTerm term : hadithTerms) {
+            HadithStorage.save(term, session);
+        }
+        session.getTransaction().commit();
+        session.close();
     }
 
 
