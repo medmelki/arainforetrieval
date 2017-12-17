@@ -4,6 +4,10 @@ import com.awn.ArabicWordSenseService;
 import com.indexing.storage.api.HadithSearch;
 import com.indexing.storage.entity.HadithTerm;
 import com.indexing.storage.util.HibernateUtil;
+import com.ontology.search.OntDictionary;
+import com.ontology.search.OntMatcher;
+import com.ontology.search.OntTerm;
+import com.ontology.util.OntologyLoader;
 import com.textprocessing.Stemmer;
 import com.textprocessing.util.HadithIndexUtil;
 import com.textprocessing.util.TextUtility;
@@ -15,8 +19,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -39,7 +44,7 @@ public class SearchImpl {
 
         hadiths.forEach(System.out::println);
         session.close();
-        System.out.println("Done...");
+        System.out.println("\nDone...");
     }
 
     private static List<String> termExpansion(List<String> words) {
@@ -54,15 +59,24 @@ public class SearchImpl {
 
         // retrieve related indexed hadith by fuzzy search
         FullTextSession fullTextSession = Search.getFullTextSession(session);
+
         List<HadithTerm> hadithTerms = new ArrayList<>();
+        Set<Long> docIndexesInSahih = new LinkedHashSet<>();
+        Set<Double> similarities = new LinkedHashSet<>();
         for (String word : qwords) {
             hadithTerms.addAll(HadithSearch.getHadithTerms(word, fullTextSession));
+            // filter unique docDIDs
+            for (HadithTerm hadithTerm : hadithTerms) {
+                docIndexesInSahih.add(HadithIndexUtil.getIndexInSahih(hadithTerm.getDIDdoc()));
+                // calculate similarity
+//                ResnikCalculator
+//                        .calcRelatedness(OntologyLoader.ontModel,
+//                                reasoning(hadithTerm.getCr()),
+//                                reasoning(word));
+            }
+            hadithTerms.clear();
         }
-        // filter unique docDIDs
-        Set<Long> docIndexesInSahih = new HashSet<>();
-        for (HadithTerm hadithTerm : hadithTerms) {
-            docIndexesInSahih.add(HadithIndexUtil.getIndexInSahih(hadithTerm.getDIDdoc()));
-        }
+
 
         StringBuilder hadithContent = new StringBuilder();
         // read hadith txt
@@ -78,6 +92,19 @@ public class SearchImpl {
                     hadithContent.indexOf(Long.toString(index + 1))));
         }
         return hadiths;
+    }
+
+    private static OntTerm reasoning(String w) {
+        OntDictionary dictionary = null;
+        try {
+            dictionary = OntologyLoader.loadOntology();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        assert dictionary != null;
+        OntMatcher matcher = new OntMatcher(dictionary);
+        List<OntTerm> result = matcher.match(w);
+        return result == null || result.isEmpty() ? null : result.get(0);
     }
 
     public static void main(String[] args) {

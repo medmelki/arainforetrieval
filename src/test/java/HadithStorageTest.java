@@ -5,7 +5,6 @@ public class HadithStorageTest {
 
     @Test
     public void persistTest() {
-        // TODO : fix test
 //        HadithTerm hadithTerm = new HadithTerm();
 //        hadithTerm.setDIDdoc(92L);
 //        hadithTerm.setCr("maradh");

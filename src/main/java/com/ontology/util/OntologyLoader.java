@@ -10,9 +10,11 @@ import java.sql.SQLException;
 
 public class OntologyLoader {
 
+    public static OntModel ontModel;
+
     public static OntDictionary loadOntology() throws ClassNotFoundException, SQLException {
         FileOntModelLoader foml = new FileOntModelLoader();
-        OntModel ontModel = foml.getOntModel(Config.ontologyFile);
+        ontModel = foml.getOntModel(Config.ontologyFile);
 
         //connect to the RDF store (Database)
         MySQLRDFStore rdfStore = new MySQLRDFStore(Config.DB_URL, Config.DB_USER, Config.DB_PASSWD);
