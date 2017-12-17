@@ -19,11 +19,10 @@ public class OntMatcher {
     }
 
     public List<OntTerm> match(String queryText) {
-        // TODO : delete when applying before stemming
-        String StemmedQueryText = OntMatcher.stemmer.findRoot(queryText);
+//        String StemmedQueryText = OntMatcher.stemmer.findRoot(queryText);
         List<OntTerm> results = new ArrayList<OntTerm>();
         for (OntTerm term : allTerms) {
-            if (term.match(StemmedQueryText))
+            if (term.match(queryText))
                 results.add(term);
         }
         return results;
