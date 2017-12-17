@@ -7,9 +7,9 @@ public class HadithIndexUtilTest {
 
     @Test
     public void testGetIndexInSahih() {
-        assertEquals(5445, HadithIndexUtil.getIndexInSahih(92));
-        assertEquals(5354, HadithIndexUtil.getIndexInSahih(0));
-        assertEquals(5363, HadithIndexUtil.getIndexInSahih(10));
-        assertEquals(5403, HadithIndexUtil.getIndexInSahih(50));
+        assertEquals(5445, HadithIndexUtil.getIndexInSahih(92L));
+        assertEquals(5354, HadithIndexUtil.getIndexInSahih(0L));
+        assertEquals(5363, HadithIndexUtil.getIndexInSahih(10L));
+        assertEquals(5403, HadithIndexUtil.getIndexInSahih(50L));
     }
 }

@@ -5,9 +5,9 @@ public class HadithIndexUtil {
     private static final int LAST_HADITH_SAHIH_INDEX = 5445;
     private static final int LAST_HADITH_FILED_INDEX = 92;
 
-    public static int getIndexInSahih(int hadithFileIndex) {
+    public static long getIndexInSahih(Long hadithFileIndex) {
         if (hadithFileIndex > LAST_HADITH_FILED_INDEX || hadithFileIndex < 0) // invalid index
-            return -1;
+            return -1L;
         if (hadithFileIndex >= 10)
             return LAST_HADITH_SAHIH_INDEX + hadithFileIndex - LAST_HADITH_FILED_INDEX;
         else

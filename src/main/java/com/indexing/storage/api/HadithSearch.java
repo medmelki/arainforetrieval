@@ -17,4 +17,13 @@ public class HadithSearch {
         return fullTextQuery.list();
     }
 
+    public static List<HadithTerm> getHadithTerms(String text, FullTextSession fullTextSession) {
+        QueryBuilder qb = fullTextSession.getSearchFactory()
+                .buildQueryBuilder().forEntity(HadithTerm.class).get();
+
+        return new HadithSearch().getResult(qb,
+                fullTextSession, text);
+    }
+
+
 }
