@@ -1,11 +1,28 @@
 package com.awn;
 
 import com.awn.dao.ArabicWordSenseDao;
+import com.awn.db.DBAccess;
+import com.awn.util.BuckwalterToArabic;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ArabicWordSenseService {
 
+
+    public static List<String> getSynonyms(String word, String root) {
+        DBAccess.connectToDB();
+        final ArabicWordSenseService senseService = new ArabicWordSenseService();
+        final BuckwalterToArabic translator = new BuckwalterToArabic();
+        List<String> roots = senseService.readWordSenses(word, root, "", false);
+        roots = roots.stream()
+                .map(s -> s.replaceAll("_.+", ""))
+                .map(translator::transliterate)
+                .collect(Collectors.toList());
+        DBAccess.closeConnection();
+        return roots;
+    }
 
     private ArabicWordSenseDao arabicWordSenseDao;
 
