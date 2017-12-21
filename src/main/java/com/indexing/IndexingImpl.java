@@ -42,8 +42,8 @@ public class IndexingImpl {
     }
 
     public static void index() {
-        List<String> phrases = new ArrayList<>();
         for (Path filePath : filePaths) {
+            List<String> phrases = new ArrayList<>();
             long docDID = getDocDID(filePath);
             try (Stream<String> stream = Files.lines(Paths.get(filePath.toString()))) {
                 // foreach ph in doc
@@ -111,6 +111,10 @@ public class IndexingImpl {
 
 
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
         index();
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println(totalTime / 1000 + " seconds");
     }
 }

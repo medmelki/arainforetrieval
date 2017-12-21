@@ -45,6 +45,8 @@ public class TextUtility {
 
     public static String removePunctuations(String currentText) {
 
+        if (currentText == null || currentText.isEmpty())
+            return currentText;
         ArrayList<String> tokens = new ArrayList<>();
         StringBuilder modifiedWord = new StringBuilder("");
 
