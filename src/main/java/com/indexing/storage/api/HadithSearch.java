@@ -10,7 +10,7 @@ public class HadithSearch {
 
     public List<HadithTerm> getResult(QueryBuilder qb, FullTextSession fullTextSession, String query) {
         org.apache.lucene.search.Query luceneQuery = ((org.hibernate.search.query.dsl.QueryBuilder) qb)
-                .keyword().fuzzy().onFields("term", "cr")
+                .keyword().onFields("term", "cr")
                 .matching(query).createQuery();
         org.hibernate.Query fullTextQuery = fullTextSession
                 .createFullTextQuery(luceneQuery);

@@ -109,5 +109,7 @@ public class SearchImpl {
 
     public static void main(String[] args) {
         search("فوائد العسل");
+//        search("أجرة الحجامة");
+//        search("الأدوية الوقائية");
     }
 }
