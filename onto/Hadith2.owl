@@ -1,20 +1,9 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY untitled-ontology-13 "http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13#" >
-    <!ENTITY untitled-ontology-132 "http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#" >
-]>
-
-
 <rdf:RDF xmlns="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13#"
      xml:base="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:untitled-ontology-132="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#"
      xmlns:untitled-ontology-13="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -36,7 +25,7 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ArticleOf -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;ArticleOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ArticleOf">
         <rdfs:label>أداة أو جزء أو بند</rdfs:label>
     </owl:ObjectProperty>
     
@@ -44,19 +33,19 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IS-a -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;IS-a">
-        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:range rdf:resource="&owl;Thing"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IS-a">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsBranchOf -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;IsBranchOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsBranchOf">
         <rdfs:label>فرع من</rdfs:label>
     </owl:ObjectProperty>
     
@@ -64,28 +53,28 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsOneOf -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;IsOneOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsOneOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine"/>
         <rdfs:label>واحد من أو احدى</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;Al-nabawi_medicine"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsPartOf -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;IsPartOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsPartOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine"/>
         <rdfs:label>أجزاء متعلقة</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;Al-nabawi_medicine"/>
-        <owl:inverseOf rdf:resource="&untitled-ontology-132;hasPart"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsReasonOf -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;IsReasonOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsReasonOf">
         <rdfs:label>سبب من</rdfs:label>
     </owl:ObjectProperty>
     
@@ -93,136 +82,134 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsTreatedby -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;IsTreatedby"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsTreatedby"/>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsTypeOf -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;IsTypeOf">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsTypeOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hastype"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine"/>
         <rdfs:label>نوع من</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;Al-nabawi_medicine"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#cures -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;cures">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#cures">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#isCuredBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
         <rdfs:label>الأمراض التي تعالج</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;category"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasBeanfit -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;hasBeanfit">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasBeanfit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine"/>
         <rdfs:label>فوائد</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;Al-nabawi_medicine"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasCureMothod -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;hasCureMothod">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasCureMothod">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentMethods"/>
         <rdfs:label>طريقة العلاج</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;TreatmentMethods"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasFees -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;hasFees">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasFees">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cures"/>
         <rdfs:label>العلاج لديه أجرة (ثمن)</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;Cures"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasPart -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;hasPart">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsPartOf"/>
         <rdfs:label>يحتوي على</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-132;IsPartOf"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasPlace -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;hasPlace">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasPlace">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentPlace"/>
         <rdfs:label>مكان أو موضع العلاج</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;TreatmentPlace"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasPrevent -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;hasPrevent">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasPrevent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Prohibition&amp;Prevention"/>
         <rdfs:comment>نهي ومنع</rdfs:comment>
-        <rdfs:range rdf:resource="&untitled-ontology-132;Prohibition&amp;Prevention"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasTime -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;hasTime">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentTimes"/>
         <rdfs:label>وقت العلاج</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;TreatmentTimes"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hastype -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;hastype">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hastype">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsTypeOf"/>
         <rdfs:label>لديها نوع</rdfs:label>
-        <owl:inverseOf rdf:resource="&untitled-ontology-132;IsTypeOf"/>
-        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-132;IsTypeOf"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#isCuredBy -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;isCuredBy">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#isCuredBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cures"/>
         <rdfs:label>الأدوية التي تعالج المرض</rdfs:label>
-        <rdfs:range rdf:resource="&untitled-ontology-132;Cures"/>
-        <owl:inverseOf rdf:resource="&untitled-ontology-132;cures"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#narrated -->
 
-    <owl:ObjectProperty rdf:about="&untitled-ontology-132;narrated">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="&untitled-ontology-132;Hadith"/>
-        <rdfs:domain rdf:resource="&untitled-ontology-132;Rawi"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#narrated">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
@@ -240,66 +227,63 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasArabicName -->
 
-    <owl:DatatypeProperty rdf:about="&untitled-ontology-132;hasArabicName">
-        <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasArabicName">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasCategory -->
 
-    <owl:DatatypeProperty rdf:about="&untitled-ontology-132;hasCategory">
-        <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasCategory">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasEndIndex -->
 
-    <owl:DatatypeProperty rdf:about="&untitled-ontology-132;hasEndIndex">
-        <rdfs:range rdf:resource="&xsd;integer"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasEndIndex">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasName -->
 
-    <owl:DatatypeProperty rdf:about="&untitled-ontology-132;hasName">
-        <rdfs:domain rdf:resource="&untitled-ontology-132;People"/>
-        <rdfs:domain rdf:resource="&untitled-ontology-132;Resources"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasSource -->
 
-    <owl:DatatypeProperty rdf:about="&untitled-ontology-132;hasSource">
-        <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasSource">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasStartIndex -->
 
-    <owl:DatatypeProperty rdf:about="&untitled-ontology-132;hasStartIndex">
-        <rdfs:range rdf:resource="&xsd;integer"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasStartIndex">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasText -->
 
-    <owl:DatatypeProperty rdf:about="&untitled-ontology-132;hasText">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="&untitled-ontology-132;Resources"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasText">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -315,956 +299,714 @@
     
 
 
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Afreet -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Afreet">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Gin_types"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Al-nabawi_medicine">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
         <rdfs:label>الطب النبوي</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#AlaaraabQuestion -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;AlaaraabQuestion">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#AlaaraabQuestion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Guestions"/>
         <rdfs:label>أسئلة الأعراب</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Guestions"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Altauzatt -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Altauzatt">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;prayer_types"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Annotation -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Annotation"/>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Arrow -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Arrow">
-        <rdfs:label>السهم</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;IndividualWeapons"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Annotation"/>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Beanfits -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Beanfits">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Beanfits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
         <rdfs:label>فوائد</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BloodDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;BloodDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BloodDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الدم</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Bodies -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Bodies">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Bodies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diseases"/>
         <rdfs:label>أمراض الجسم</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Diseases"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Bow -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Bow">
-        <rdfs:label>القوس</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;IndividualWeapons"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cancerous -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Cancerous">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cancerous">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Bodies"/>
         <rdfs:label>سرطاني</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Bodies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Catapult -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Catapult">
-        <rdfs:label>المنجنيق</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;HeavyWeapons"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CirculatorySysDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;CirculatorySysDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CirculatorySysDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الجهاز الدوري</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Composite_med -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Composite_med">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Composite_med">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curative_medicine"/>
         <rdfs:label>ادوية مركبة</rdfs:label>
         <rdfs:label>علاج مركب</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curative_medicine"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Curable">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Bodies"/>
         <rdfs:label>أمراض قابلة للعلاج</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Bodies"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curative_medicine -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Curative_medicine">
-        <rdfs:label>الطب العلاجي</rdfs:label>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curative_medicine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Remedies"/>
         <rdfs:label>الأدوية الطبيعية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Remedies"/>
+        <rdfs:label>الطب العلاجي</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cures -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Cures">
-        <rdfs:label>الدواء</rdfs:label>
-        <rdfs:label>المداوة</rdfs:label>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine"/>
         <rdfs:label>الأدوية</rdfs:label>
+        <rdfs:label>الدواء</rdfs:label>
         <rdfs:label>العلاج</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Al-nabawi_medicine"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Dagger -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Dagger">
-        <rdfs:label>الخنجر</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;IndividualWeapons"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#DefensiveWeapons -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;DefensiveWeapons">
-        <rdfs:label>الأسلحة الدفاعية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;IslamicWeapons"/>
+        <rdfs:label>المداوة</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Devils -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Devils">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Gin_types"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Devils">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#أنواع_الجن"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#DigestiveSysDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;DigestiveSysDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#DigestiveSysDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الجهاز الهضمي</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diseases -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Diseases">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diseases">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine"/>
         <rdfs:label>الأمراض</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Al-nabawi_medicine"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#EarDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;EarDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#EarDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الأذن</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#EyeDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;EyeDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#EyeDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض العين</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Faith -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Faith">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Faith">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine"/>
         <rdfs:label>الإيمان</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Al-nabawi_medicine"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Gallblader -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Gallblader">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Gallblader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>المرارة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Giant -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Giant">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Gin_types"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Gin -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Gin">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Gin_types -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Gin_types">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Gin"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Giant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#أنواع_الجن"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Guestions -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Guestions">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Guestions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ScienceChapter"/>
         <rdfs:label>الأسئلة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;ScienceChapter"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hadith -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Hadith">
-        <rdfs:label>الأحاديث</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Resources"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hearts -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Hearts">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hearts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diseases"/>
         <rdfs:label>أمراض القلب</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Diseases"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hearts_Dis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Hearts_Dis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hearts_Dis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>امراض القلب</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HeavyWeapons -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;HeavyWeapons">
-        <rdfs:label>الأسلحة الثقيلة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;IslamicWeapons"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Helmet -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Helmet">
-        <rdfs:label>البيضة</rdfs:label>
-        <rdfs:label>الخوذة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;DefensiveWeapons"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Herbs -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Herbs">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Herbs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#plants"/>
         <rdfs:label>أعشاب</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;plants"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HumanBody -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;HumanBody">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HumanBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine"/>
         <rdfs:label>أجزاء الجسم</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Al-nabawi_medicine"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Incantation -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Incantation">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Incantation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual_Cure"/>
         <rdfs:label>تعوذات</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Spiritual_Cure"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Incidents -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Incidents">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
-        <rdfs:comment>حوادث</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Incurable -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Incurable">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Incurable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Bodies"/>
         <rdfs:label>أمراض غير قابلة للعلاج</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Bodies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IndividualWeapons -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;IndividualWeapons">
-        <rdfs:label>الأسلحة الفردية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;IslamicWeapons"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;InductionTherapy">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PreventiveMedicine"/>
         <rdfs:label>الحث على التداوي</rdfs:label>
         <rdfs:label>الحث على المداوة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;PreventiveMedicine"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Infection -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Infection">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Infection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#حوادث"/>
         <rdfs:label>إصابة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Incidents"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InternalDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;InternalDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InternalDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>امراض داخلية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Intestine_Dis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Intestine_Dis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Intestine_Dis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض معوية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IslamicWeapons -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;IslamicWeapons">
-        <rdfs:label>الأسلحة الإسلامية</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Liver_Dis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Liver_Dis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Liver_Dis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الكبد</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#LungDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;LungDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#LungDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>امراض الرئة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MentalityDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;MentalityDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MentalityDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>الأمراض العقلية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MissilesFireworks -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;MissilesFireworks">
-        <rdfs:label>القذائف النارية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;HeavyWeapons"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MuscularSysDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;MuscularSysDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MuscularSysDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>امراض الجهاز العضلي</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#NervousSysDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;NervousSysDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#NervousSysDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الجهاز العصبي</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Olive -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Olive">
-        <rdfs:label>شجرة الزيتون</rdfs:label>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Olive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Trees"/>
         <rdfs:label>الشجرة المباركة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Trees"/>
+        <rdfs:label>شجرة الزيتون</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Operations -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Operations">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Operations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Remedies"/>
         <rdfs:label>عمليات</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Remedies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#People -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;People">
-        <rdfs:label>أشخاص</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PillarsOfFaith -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;PillarsOfFaith">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PillarsOfFaith">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Faith"/>
         <rdfs:label>أركان الإيمان</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Faith"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Plam -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Plam">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Plam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Trees"/>
         <rdfs:label>النخلة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Trees"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Poisonous -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Poisonous">
-        <rdfs:label>سموم</rdfs:label>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Poisonous">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Bodies"/>
         <rdfs:label>سم</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Bodies"/>
+        <rdfs:label>سموم</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Prayer -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Prayer"/>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PregnancyChildbirthMortality -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;PregnancyChildbirthMortality">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PregnancyChildbirthMortality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>الجمل والولادة والنفاس</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PreventiveMedicine -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;PreventiveMedicine">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PreventiveMedicine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Remedies"/>
         <rdfs:label>الأدوية الوقائية</rdfs:label>
         <rdfs:label>الطب الوقائي</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Remedies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ProphetBiography -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;ProphetBiography">
-        <rdfs:label>السيرة النبوية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ProphetIncursions -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;ProphetIncursions">
-        <rdfs:label>السير والمغازي</rdfs:label>
-        <rdfs:label>سيرة النبي</rdfs:label>
-        <rdfs:label>سيرة الرسول</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;ProphetBiography"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Quran -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Quran">
-        <rdfs:label>القرآن</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Resources"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Rawi -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Rawi">
-        <rdfs:label>رواه</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;People"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Remedies -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Remedies">
-        <rdfs:label>علاج</rdfs:label>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Remedies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Al-nabawi_medicine"/>
         <rdfs:label>أدوية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Al-nabawi_medicine"/>
+        <rdfs:label>علاج</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ReproductiveSystDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;ReproductiveSystDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ReproductiveSystDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الجهاز التناسلي</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Resources -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Resources">
-        <rdfs:label>المصادر</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#RespiratoryDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;RespiratoryDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#RespiratoryDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الجهاز الننفسي</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Roka -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Roka">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Roka">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual_Cure"/>
         <rdfs:label>رقيه</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Spiritual_Cure"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Satan -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Satan">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Gin_types"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ScienceChapter -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;ScienceChapter">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ScienceChapter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
         <rdfs:label>باب العلم</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Seeds -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Seeds">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Seeds">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#plants"/>
         <rdfs:label>بذور</rdfs:label>
         <rdfs:label>حبوب</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;plants"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#SkinDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;SkinDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#SkinDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الجلد</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spear -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Spear">
-        <rdfs:label>الرمح</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;IndividualWeapons"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Spiritual">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diseases"/>
         <rdfs:label>أمراض روحانية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Diseases"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual_Cure -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Spiritual_Cure">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual_Cure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Remedies"/>
         <rdfs:label>علاج روحاني</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Remedies"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Stomach_Dis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Stomach_Dis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Stomach_Dis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض المعدة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Sword -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;Sword">
-        <rdfs:label>السيف</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;IndividualWeapons"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Symptoms -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Symptoms">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Symptoms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أعراض مرضية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ThroatDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;ThroatDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ThroatDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>امراض الحلق</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentFees -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;TreatmentFees">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentFees">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
         <rdfs:label>أجرة المعالجة</rdfs:label>
         <rdfs:label>رسوم العلاج</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentMethods -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;TreatmentMethods">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentMethods">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
         <rdfs:label>طريقة العلاج</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentPlace -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;TreatmentPlace">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
         <rdfs:label>مكان أو موضع العلاج</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentTimes -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;TreatmentTimes">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentTimes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
         <rdfs:label>أوقات المعالجة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Trees -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Trees">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Trees">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#plants"/>
         <rdfs:label>أشجار</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;plants"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TumorsDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;TumorsDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TumorsDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض الأورام</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ulcer -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Ulcer">
-        <rdfs:label>القرحة</rdfs:label>
-        <rdfs:label>جرح</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Incidents"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ulcer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#حوادث"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Water -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Water">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Water">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Operations"/>
+        <rdfs:label>الماء</rdfs:label>
         <rdfs:label>ماء</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Operations"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Wounds -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Wounds">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Wounds">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>الجروح</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#armor -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;armor">
-        <rdfs:label>الدرع</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;DefensiveWeapons"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;category"/>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#day_prayer -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;day_prayer">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;prayer_types"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#house_prayer -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;house_prayer">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;prayer_types"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#humma -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;humma">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;InternalDis"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#night_prayer -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;night_prayer">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;prayer_types"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#plants -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;plants">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#plants">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curative_medicine"/>
         <rdfs:label>النباتات</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curative_medicine"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#poisons -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;poisons">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#poisons">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Bodies"/>
         <rdfs:label>سموم</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Bodies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#prayer_types -->
-
-    <owl:Class rdf:about="&untitled-ontology-132;prayer_types">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Prayer"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#prayers -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;prayers">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#prayers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual_Cure"/>
         <rdfs:label>أدعية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Spiritual_Cure"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#psychologic -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;psychologic">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#psychologic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diseases"/>
         <rdfs:label>أمراض نفسية</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Diseases"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#shield -->
+    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#أنواع_الجن -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;shield">
-        <rdfs:label>الترس</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;DefensiveWeapons"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#أنواع_الجن">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#جن"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#sleep_prayer -->
+    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#تقرح -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;sleep_prayer">
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;night_prayer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#تقرح">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#حوادث"/>
+        <rdfs:label>تقرح</rdfs:label>
+        <rdfs:label>تقرحات</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#tank -->
+    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#جن -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;tank">
-        <rdfs:label>الدبابة</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;HeavyWeapons"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#جن">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#حمى -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#حمى">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InternalDis"/>
+        <rdfs:label>حمى</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#حوادث -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#حوادث">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
+        <rdfs:comment>حوادث</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#شيطان -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#شيطان">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#أنواع_الجن"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#عفريت -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#عفريت">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#أنواع_الجن"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Flu&amp;coldsDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Flu&amp;coldsDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Flu&amp;coldsDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>البرد والإنفلونزا</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Joints&amp;BonesDis -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Joints&amp;BonesDis">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Joints&amp;BonesDis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curable"/>
         <rdfs:label>أمراض المفاصل والعظام</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;Curable"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Prohibition&amp;Prevention -->
 
-    <owl:Class rdf:about="&untitled-ontology-132;Prohibition&amp;Prevention">
+    <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Prohibition&amp;Prevention">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
         <rdfs:label>نهي ومنع</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&untitled-ontology-132;category"/>
     </owl:Class>
     
 
@@ -1282,8 +1024,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#AlaarabQ1 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;AlaarabQ1">
-        <rdf:type rdf:resource="&untitled-ontology-132;AlaaraabQuestion"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#AlaarabQ1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#AlaaraabQuestion"/>
         <rdfs:label>سؤال التداوي</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1291,22 +1033,22 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Alozra -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Alozra">
-        <rdf:type rdf:resource="&untitled-ontology-132;ThroatDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Alozra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ThroatDis"/>
+        <untitled-ontology-132:hasPrevent rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PrickThroat"/>
+        <rdfs:label>التهاب الأنف</rdfs:label>
         <rdfs:label>التهاب اللوزتين</rdfs:label>
         <rdfs:label>العذرة</rdfs:label>
         <rdfs:label>بنات الأذن</rdfs:label>
         <rdfs:label>وجع في الحلق</rdfs:label>
-        <rdfs:label>التهاب الأنف</rdfs:label>
-        <untitled-ontology-132:hasPrevent rdf:resource="&untitled-ontology-132;PrickThroat"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Animal_Poisons -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Animal_Poisons">
-        <rdf:type rdf:resource="&untitled-ontology-132;poisons"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Animal_Poisons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#poisons"/>
         <rdfs:label>سموم حيوانية</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1314,8 +1056,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Asthma -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Asthma">
-        <rdf:type rdf:resource="&untitled-ontology-132;RespiratoryDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Asthma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#RespiratoryDis"/>
         <rdfs:label>الربو</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1323,8 +1065,7 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleOfBadr -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BattleOfBadr">
-        <rdf:type rdf:resource="&untitled-ontology-132;ProphetIncursions"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleOfBadr">
         <rdfs:label>غزوة بدر</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1332,8 +1073,7 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofAlahzaab -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BattleofAlahzaab">
-        <rdf:type rdf:resource="&untitled-ontology-132;ProphetIncursions"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofAlahzaab">
         <rdfs:label>غزوة الأحزاب</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1341,8 +1081,7 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofHudaybiyah -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BattleofHudaybiyah">
-        <rdf:type rdf:resource="&untitled-ontology-132;ProphetIncursions"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofHudaybiyah">
         <rdfs:label>غزوة الحديبية</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1350,8 +1089,7 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofKhyber -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BattleofKhyber">
-        <rdf:type rdf:resource="&untitled-ontology-132;ProphetIncursions"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofKhyber">
         <rdfs:label>غزوة خيبر</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1359,8 +1097,7 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofMutah -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BattleofMutah">
-        <rdf:type rdf:resource="&untitled-ontology-132;ProphetIncursions"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofMutah">
         <rdfs:label>غزوة مؤته</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1368,8 +1105,7 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofOheed -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BattleofOheed">
-        <rdf:type rdf:resource="&untitled-ontology-132;ProphetIncursions"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BattleofOheed">
         <rdfs:label>غزوة أحد</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1377,8 +1113,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInAlQadar -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BeliefInAlQadar">
-        <rdf:type rdf:resource="&untitled-ontology-132;PillarsOfFaith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInAlQadar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PillarsOfFaith"/>
         <rdfs:label>الإيمان بالقدر</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1386,8 +1122,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInAngels -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BeliefInAngels">
-        <rdf:type rdf:resource="&untitled-ontology-132;PillarsOfFaith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInAngels">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PillarsOfFaith"/>
         <rdfs:label>الإيمان بالملائكة</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1395,8 +1131,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInLastday -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BeliefInLastday">
-        <rdf:type rdf:resource="&untitled-ontology-132;PillarsOfFaith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInLastday">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PillarsOfFaith"/>
         <rdfs:label>الإيمان باليوم الأخر</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1404,8 +1140,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInMessengers -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;BeliefInMessengers">
-        <rdf:type rdf:resource="&untitled-ontology-132;PillarsOfFaith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInMessengers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PillarsOfFaith"/>
         <rdfs:label>الإيمان بالرسل</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1413,20 +1149,20 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Black_Cumin -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Black_Cumin">
-        <rdf:type rdf:resource="&untitled-ontology-132;Seeds"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Black_Cumin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Seeds"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Colic"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Headache1"/>
         <rdfs:label>الحبة السوداء</rdfs:label>
         <rdfs:label>حبة البركة</rdfs:label>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Colic"/>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Headache1"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Botanical_Poisons -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Botanical_Poisons">
-        <rdf:type rdf:resource="&untitled-ontology-132;poisons"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Botanical_Poisons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#poisons"/>
         <rdfs:label>سموم نباتية</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1434,19 +1170,19 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cauterization -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Cauterization">
-        <rdf:type rdf:resource="&untitled-ontology-132;PreventiveMedicine"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cauterization">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PreventiveMedicine"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ulcer"/>
+        <untitled-ontology-132:hasPrevent rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ForbiddingCauterization"/>
         <rdfs:label>الكي</rdfs:label>
-        <untitled-ontology-132:hasPrevent rdf:resource="&untitled-ontology-132;ForbiddingCauterization"/>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Ulcer"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Chemical_Poisons -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Chemical_Poisons">
-        <rdf:type rdf:resource="&untitled-ontology-132;poisons"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Chemical_Poisons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#poisons"/>
         <rdfs:label>سموم كيميائية</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1454,18 +1190,18 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Chweean -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Chweean">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Chweean">
+        <untitled-ontology-132:hasPart rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Honey1"/>
+        <untitled-ontology-132:hasPart rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#quran"/>
         <rdfs:label>الشفاءان</rdfs:label>
-        <untitled-ontology-132:hasPart rdf:resource="&untitled-ontology-132;Honey1"/>
-        <untitled-ontology-132:hasPart rdf:resource="&untitled-ontology-132;quran"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cold_Water -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Cold_Water">
-        <rdf:type rdf:resource="&untitled-ontology-132;Operations"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cold_Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Operations"/>
         <rdfs:label>ماء بارد</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1473,8 +1209,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Colic -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Colic">
-        <rdf:type rdf:resource="&untitled-ontology-132;DigestiveSysDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Colic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#DigestiveSysDis"/>
         <rdfs:label>المغص</rdfs:label>
         <rdfs:label>وجع في البطن</rdfs:label>
     </owl:NamedIndividual>
@@ -1483,8 +1219,7 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ConquestofMecca -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;ConquestofMecca">
-        <rdf:type rdf:resource="&untitled-ontology-132;ProphetIncursions"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ConquestofMecca">
         <rdfs:label>فتح مكة</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1492,8 +1227,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Constipation -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Constipation">
-        <rdf:type rdf:resource="&untitled-ontology-132;InternalDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Constipation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InternalDis"/>
         <rdfs:label>الإمساك</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1501,8 +1236,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Coryza -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Coryza">
-        <rdf:type rdf:resource="&untitled-ontology-132;Flu&amp;coldsDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Coryza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Flu&amp;coldsDis"/>
         <rdfs:label>زكام</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1510,38 +1245,38 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Costus -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Costus">
-        <rdf:type rdf:resource="&untitled-ontology-132;Trees"/>
-        <rdfs:label>القسط الهندي</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Costus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Trees"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Alozra"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Headache1"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Pleurisy1"/>
+        <untitled-ontology-132:hasBeanfit rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#SevenHealing"/>
         <rdfs:label>العود الهندي</rdfs:label>
         <rdfs:label>القسط البحري</rdfs:label>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Alozra"/>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Headache1"/>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Pleurisy1"/>
-        <untitled-ontology-132:hasBeanfit rdf:resource="&untitled-ontology-132;SevenHealing"/>
+        <rdfs:label>القسط الهندي</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cupping -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Cupping">
-        <rdf:type rdf:resource="&untitled-ontology-132;PreventiveMedicine"/>
-        <rdfs:label>امتصاص الدم الزائد</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cupping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PreventiveMedicine"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Headache1"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MigraineHeadache"/>
+        <untitled-ontology-132:hasFees rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CuppingFees"/>
+        <untitled-ontology-132:hasPlace rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CuppingPlace"/>
+        <untitled-ontology-132:hasTime rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CuppingTime"/>
         <rdfs:label>الحجامة</rdfs:label>
-        <untitled-ontology-132:hasFees rdf:resource="&untitled-ontology-132;CuppingFees"/>
-        <untitled-ontology-132:hasPlace rdf:resource="&untitled-ontology-132;CuppingPlace"/>
-        <untitled-ontology-132:hasTime rdf:resource="&untitled-ontology-132;CuppingTime"/>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Headache1"/>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;MigraineHeadache"/>
+        <rdfs:label>امتصاص الدم الزائد</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CuppingFees -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;CuppingFees">
-        <rdf:type rdf:resource="&untitled-ontology-132;TreatmentFees"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CuppingFees">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentFees"/>
         <rdfs:label>أجرة الحجامة</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1549,8 +1284,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CuppingPlace -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;CuppingPlace">
-        <rdf:type rdf:resource="&untitled-ontology-132;TreatmentPlace"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CuppingPlace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentPlace"/>
         <rdfs:label>مكان الحجامة</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1558,8 +1293,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CuppingTime -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;CuppingTime">
-        <rdf:type rdf:resource="&untitled-ontology-132;TreatmentTimes"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CuppingTime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentTimes"/>
         <rdfs:label>وقت الحجامة</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1567,8 +1302,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CursingFever -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;CursingFever">
-        <rdf:type rdf:resource="&untitled-ontology-132;Prohibition&amp;Prevention"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CursingFever">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Prohibition&amp;Prevention"/>
         <rdfs:label>سب الحمى</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1576,8 +1311,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Dates -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Dates">
-        <rdf:type rdf:resource="&untitled-ontology-132;Plam"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Dates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Plam"/>
         <rdfs:label>التمر</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1585,19 +1320,19 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Dhirarh -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Dhirarh">
-        <rdf:type rdf:resource="&untitled-ontology-132;Herbs"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Dhirarh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Herbs"/>
+        <untitled-ontology-132:IsPartOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Dhirarh_Cane"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Pimple"/>
         <rdfs:label>الذريرة</rdfs:label>
-        <untitled-ontology-132:IsPartOf rdf:resource="&untitled-ontology-132;Dhirarh_Cane"/>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Pimple"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Dhirarh_Cane -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Dhirarh_Cane">
-        <rdf:type rdf:resource="&untitled-ontology-132;Herbs"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Dhirarh_Cane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Herbs"/>
         <rdfs:label>قصب الذريرة</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1605,8 +1340,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diarrhea -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Diarrhea">
-        <rdf:type rdf:resource="&untitled-ontology-132;DigestiveSysDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diarrhea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#DigestiveSysDis"/>
         <rdfs:label>استطلاق البطن</rdfs:label>
         <rdfs:label>الأسهال</rdfs:label>
     </owl:NamedIndividual>
@@ -1615,8 +1350,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diet -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Diet">
-        <rdf:type rdf:resource="&untitled-ontology-132;PreventiveMedicine"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PreventiveMedicine"/>
         <rdfs:label>الإقلال من الطعام</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1624,8 +1359,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ear -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Ear">
-        <rdf:type rdf:resource="&untitled-ontology-132;HumanBody"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HumanBody"/>
         <rdfs:label>الأذن</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1633,8 +1368,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Envy -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Envy">
-        <rdf:type rdf:resource="&untitled-ontology-132;Spiritual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Envy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual"/>
         <rdfs:label>حسد</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1642,18 +1377,18 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Epilepsy -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Epilepsy">
-        <rdf:type rdf:resource="&untitled-ontology-132;Spiritual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Epilepsy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual"/>
+        <untitled-ontology-132:isCuredBy rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#O_God"/>
         <rdfs:label>الصرع</rdfs:label>
-        <untitled-ontology-132:isCuredBy rdf:resource="&untitled-ontology-132;O_God"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ExpiationSins -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;ExpiationSins">
-        <rdf:type rdf:resource="&untitled-ontology-132;Beanfits"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ExpiationSins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Beanfits"/>
         <rdfs:label>تكفير الذنوب</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1661,8 +1396,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#External_Wounds -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;External_Wounds">
-        <rdf:type rdf:resource="&untitled-ontology-132;Wounds"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#External_Wounds">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Wounds"/>
         <rdfs:label>جروح خارجية</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1670,18 +1405,18 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Eye -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Eye">
-        <rdf:type rdf:resource="&untitled-ontology-132;Spiritual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Eye">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual"/>
+        <untitled-ontology-132:isCuredBy rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#O_God"/>
         <rdfs:label>العين</rdfs:label>
-        <untitled-ontology-132:isCuredBy rdf:resource="&untitled-ontology-132;O_God"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Face -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Face">
-        <rdf:type rdf:resource="&untitled-ontology-132;HumanBody"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Face">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HumanBody"/>
         <rdfs:label>الوجه</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1689,8 +1424,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#FaithHeavenlyBooks -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;FaithHeavenlyBooks">
-        <rdf:type rdf:resource="&untitled-ontology-132;PillarsOfFaith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#FaithHeavenlyBooks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PillarsOfFaith"/>
         <rdfs:label>الإيمان بالكتب السماوية</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1698,8 +1433,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#FaithInGod -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;FaithInGod">
-        <rdf:type rdf:resource="&untitled-ontology-132;PillarsOfFaith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#FaithInGod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PillarsOfFaith"/>
         <rdfs:label>الإيمان بالله</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1707,50 +1442,50 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Fear -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Fear">
-        <rdf:type rdf:resource="&untitled-ontology-132;psychologic"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Fear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#psychologic"/>
+        <untitled-ontology-132:isCuredBy rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#O_God"/>
         <rdfs:label>الخوف</rdfs:label>
-        <untitled-ontology-132:isCuredBy rdf:resource="&untitled-ontology-132;O_God"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Fever -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Fever">
-        <rdf:type rdf:resource="&untitled-ontology-132;InternalDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Fever">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InternalDis"/>
+        <untitled-ontology-132:hasBeanfit rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ExpiationSins"/>
+        <untitled-ontology-132:hasPrevent rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#CursingFever"/>
         <rdfs:label>ارتفاع في درجة الحرارة</rdfs:label>
-        <untitled-ontology-132:hasPrevent rdf:resource="&untitled-ontology-132;CursingFever"/>
-        <untitled-ontology-132:hasBeanfit rdf:resource="&untitled-ontology-132;ExpiationSins"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Flies -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Flies">
-        <rdf:type rdf:resource="&untitled-ontology-132;poisons"/>
-        <rdfs:label>ذباب</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Flies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#poisons"/>
+        <untitled-ontology-132:IsTypeOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Insects_Poisons"/>
         <rdfs:label>حشرات</rdfs:label>
-        <untitled-ontology-132:IsTypeOf rdf:resource="&untitled-ontology-132;Insects_Poisons"/>
+        <rdfs:label>ذباب</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Foot_Pain -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Foot_Pain">
-        <rdf:type rdf:resource="&untitled-ontology-132;Joints&amp;BonesDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Foot_Pain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Joints&amp;BonesDis"/>
+        <untitled-ontology-132:isCuredBy rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Henna"/>
         <rdfs:label>وجع في الرجلين</rdfs:label>
-        <untitled-ontology-132:isCuredBy rdf:resource="&untitled-ontology-132;Henna"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ForbiddingCauterization -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;ForbiddingCauterization">
-        <rdf:type rdf:resource="&untitled-ontology-132;Prohibition&amp;Prevention"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#ForbiddingCauterization">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Prohibition&amp;Prevention"/>
         <rdfs:label>النهي عن الكي</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1758,8 +1493,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Frechles -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Frechles">
-        <rdf:type rdf:resource="&untitled-ontology-132;SkinDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Frechles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#SkinDis"/>
         <rdfs:label>النمش</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1767,8 +1502,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Haaram -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Haaram">
-        <rdf:type rdf:resource="&untitled-ontology-132;Incurable"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Haaram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Incurable"/>
         <rdfs:label>الموت</rdfs:label>
         <rdfs:label>الهرم</rdfs:label>
     </owl:NamedIndividual>
@@ -1777,44 +1512,43 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Halsttlaak -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Halsttlaak">
-        <rdf:type rdf:resource="&untitled-ontology-132;Hadith"/>
-        <rdfs:label rdf:datatype="&xsd;string">حديث استطلاق البطن(الاسهال)</rdfs:label>
-        <untitled-ontology-132:hasText rdf:datatype="&rdfs;Literal">فى ((الصحيحين)): من حديث أبى المتوكل، عن أبى سعيد الخدرى، ((أن رجلا أتى النبى صلى الله عليه وسلم، فقال: إن أخى يشتكى بطنه وفى رواية: استطلق بطنه  فقال: (( اسقه عسلا))، فذهب ثم رجع، فقال: قد سقيته، فلم يغن عنه شيئا وفى لفظ: فلم يزده إلا استطلاقا، مرتين أو ثلاثا  كل ذلك يقول له: ((اسقه عسلا)). فقال له فى الثالثة أو الرابعة: ((صدق  الله، وكذب بطن أخيك))</untitled-ontology-132:hasText>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Halsttlaak">
+        <untitled-ontology-132:hasText rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">فى ((الصحيحين)): من حديث أبى المتوكل، عن أبى سعيد الخدرى، ((أن رجلا أتى النبى صلى الله عليه وسلم، فقال: إن أخى يشتكى بطنه وفى رواية: استطلق بطنه  فقال: (( اسقه عسلا))، فذهب ثم رجع، فقال: قد سقيته، فلم يغن عنه شيئا وفى لفظ: فلم يزده إلا استطلاقا، مرتين أو ثلاثا  كل ذلك يقول له: ((اسقه عسلا)). فقال له فى الثالثة أو الرابعة: ((صدق  الله، وكذب بطن أخيك))</untitled-ontology-132:hasText>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">حديث استطلاق البطن(الاسهال)</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HalsttlaakAnn1 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;HalsttlaakAnn1">
-        <rdf:type rdf:resource="&untitled-ontology-132;Annotation"/>
-        <rdfs:label rdf:datatype="&xsd;string">HalsttlaakAnn1</rdfs:label>
-        <untitled-ontology-132:hasStartIndex rdf:datatype="&rdfs;Literal">148</untitled-ontology-132:hasStartIndex>
-        <untitled-ontology-132:hasEndIndex rdf:datatype="&rdfs;Literal">156</untitled-ontology-132:hasEndIndex>
-        <untitled-ontology-132:hasCategory rdf:datatype="&rdfs;Literal">Halsttlaak</untitled-ontology-132:hasCategory>
-        <untitled-ontology-132:hasSource rdf:datatype="&rdfs;Literal">Halsttlaak</untitled-ontology-132:hasSource>
-        <untitled-ontology-132:hasText rdf:datatype="&rdfs;Literal">استطلقَ بطنُهُ</untitled-ontology-132:hasText>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HalsttlaakAnn1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Annotation"/>
+        <untitled-ontology-132:hasCategory rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Halsttlaak</untitled-ontology-132:hasCategory>
+        <untitled-ontology-132:hasEndIndex rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">156</untitled-ontology-132:hasEndIndex>
+        <untitled-ontology-132:hasSource rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Halsttlaak</untitled-ontology-132:hasSource>
+        <untitled-ontology-132:hasStartIndex rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">148</untitled-ontology-132:hasStartIndex>
+        <untitled-ontology-132:hasText rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">استطلقَ بطنُهُ</untitled-ontology-132:hasText>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HalsttlaakAnn1</rdfs:label>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&rdfs;Literal">Halsttlaak</owl:annotatedTarget>
-        <rdfs:isDefinedBy rdf:resource="&untitled-ontology-132;Diarrhea"/>
-        <owl:annotatedSource rdf:resource="&untitled-ontology-132;HalsttlaakAnn1"/>
-        <owl:annotatedProperty rdf:resource="&untitled-ontology-132;hasCategory"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HalsttlaakAnn1"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasCategory"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Halsttlaak</owl:annotatedTarget>
+        <rdfs:isDefinedBy rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diarrhea"/>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&rdfs;Literal">Halsttlaak</owl:annotatedTarget>
-        <rdfs:isDefinedBy rdf:resource="&untitled-ontology-132;Halsttlaak"/>
-        <owl:annotatedSource rdf:resource="&untitled-ontology-132;HalsttlaakAnn1"/>
-        <owl:annotatedProperty rdf:resource="&untitled-ontology-132;hasSource"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HalsttlaakAnn1"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasSource"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Halsttlaak</owl:annotatedTarget>
+        <rdfs:isDefinedBy rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Halsttlaak"/>
     </owl:Axiom>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Head -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Head">
-        <rdf:type rdf:resource="&untitled-ontology-132;HumanBody"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Head">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HumanBody"/>
         <rdfs:label>الرأس</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1822,8 +1556,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Headache1 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Headache1">
-        <rdf:type rdf:resource="&untitled-ontology-132;Symptoms"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Headache1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Symptoms"/>
         <rdfs:label>الصداع</rdfs:label>
         <rdfs:label>وجع في الرأس</rdfs:label>
     </owl:NamedIndividual>
@@ -1832,67 +1566,66 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Henna -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Henna">
-        <rdf:type rdf:resource="&untitled-ontology-132;Trees"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Henna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Trees"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Headache1"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ulcer"/>
         <rdfs:label>الحناء</rdfs:label>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Headache1"/>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Ulcer"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hhojama5 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Hhojama5">
-        <rdf:type rdf:resource="&untitled-ontology-132;Hadith"/>
-        <rdfs:label rdf:datatype="&xsd;string">حديث أجر الحجامة</rdfs:label>
-        <untitled-ontology-132:hasText rdf:datatype="&rdfs;Literal">حدثنا محمد بن مقاتل، أخبرنا عبد الله، أخبرنا حميد الطويل، عن أنس ـ رضى الله عنه ـ أنه سئل عن أجر الحجام، فقال احتجم رسول الله صلى الله عليه وسلم حجمه أبو طيبة، وأعطاه صاعين من طعام، وكلم مواليه فخففوا عنه، وقال ‏&quot;‏ إن أمثل ما تداويتم به الحجامة والقسط البحري ‏&quot;‏‏.‏ وقال ‏&quot;‏ لا تعذبوا صبيانكم بالغمز من العذرة، وعليكم بالقسط ‏&quot;‏‏.‏</untitled-ontology-132:hasText>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hhojama5">
+        <untitled-ontology-132:hasText rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">حدثنا محمد بن مقاتل، أخبرنا عبد الله، أخبرنا حميد الطويل، عن أنس ـ رضى الله عنه ـ أنه سئل عن أجر الحجام، فقال احتجم رسول الله صلى الله عليه وسلم حجمه أبو طيبة، وأعطاه صاعين من طعام، وكلم مواليه فخففوا عنه، وقال ‏&quot;‏ إن أمثل ما تداويتم به الحجامة والقسط البحري ‏&quot;‏‏.‏ وقال ‏&quot;‏ لا تعذبوا صبيانكم بالغمز من العذرة، وعليكم بالقسط ‏&quot;‏‏.‏</untitled-ontology-132:hasText>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">حديث أجر الحجامة</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hhojama5Ann1 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Hhojama5Ann1">
-        <rdf:type rdf:resource="&untitled-ontology-132;Annotation"/>
-        <rdfs:label rdf:datatype="&xsd;string">Hhojama5Ann1</rdfs:label>
-        <untitled-ontology-132:hasStartIndex rdf:datatype="&rdfs;Literal">147</untitled-ontology-132:hasStartIndex>
-        <untitled-ontology-132:hasEndIndex rdf:datatype="&rdfs;Literal">165</untitled-ontology-132:hasEndIndex>
-        <untitled-ontology-132:hasCategory rdf:datatype="&rdfs;Literal">CuppingFees</untitled-ontology-132:hasCategory>
-        <untitled-ontology-132:hasSource rdf:datatype="&rdfs;Literal">Hhojama5</untitled-ontology-132:hasSource>
-        <untitled-ontology-132:hasText rdf:datatype="&rdfs;Literal">أجر الحجام</untitled-ontology-132:hasText>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hhojama5Ann1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Annotation"/>
+        <untitled-ontology-132:hasCategory rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">CuppingFees</untitled-ontology-132:hasCategory>
+        <untitled-ontology-132:hasEndIndex rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">165</untitled-ontology-132:hasEndIndex>
+        <untitled-ontology-132:hasSource rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Hhojama5</untitled-ontology-132:hasSource>
+        <untitled-ontology-132:hasStartIndex rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">147</untitled-ontology-132:hasStartIndex>
+        <untitled-ontology-132:hasText rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">أجر الحجام</untitled-ontology-132:hasText>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hhojama5Ann1</rdfs:label>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <rdfs:label rdf:resource="&untitled-ontology-132;Hhojama5"/>
-        <owl:annotatedTarget rdf:datatype="&rdfs;Literal">Hhojama5</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&untitled-ontology-132;Hhojama5Ann1"/>
-        <owl:annotatedProperty rdf:resource="&untitled-ontology-132;hasSource"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hhojama5Ann1"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasCategory"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">CuppingFees</owl:annotatedTarget>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hhojama5Ann1"/>
     </owl:Axiom>
     <owl:Axiom>
-        <rdfs:label rdf:resource="&untitled-ontology-132;Hhojama5Ann1"/>
-        <owl:annotatedTarget rdf:datatype="&rdfs;Literal">CuppingFees</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&untitled-ontology-132;Hhojama5Ann1"/>
-        <owl:annotatedProperty rdf:resource="&untitled-ontology-132;hasCategory"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hhojama5Ann1"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasSource"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Hhojama5</owl:annotatedTarget>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hhojama5"/>
     </owl:Axiom>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Honey1 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Honey1">
-        <rdf:type rdf:resource="&untitled-ontology-132;Composite_med"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Honey1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Composite_med"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Diarrhea"/>
+        <untitled-ontology-132:hasBeanfit rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Honey1beanfit1"/>
+        <untitled-ontology-132:hasBeanfit rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Honey1beanfit2"/>
         <rdfs:label>العسل</rdfs:label>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Diarrhea"/>
-        <untitled-ontology-132:hasBeanfit rdf:resource="&untitled-ontology-132;Honey1beanfit1"/>
-        <untitled-ontology-132:hasBeanfit rdf:resource="&untitled-ontology-132;Honey1beanfit2"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Honey1beanfit1 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Honey1beanfit1">
-        <rdf:type rdf:resource="&untitled-ontology-132;Beanfits"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Honey1beanfit1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Beanfits"/>
         <rdfs:label>لم يصبه عظيم من البلاء</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1900,8 +1633,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Honey1beanfit2 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Honey1beanfit2">
-        <rdf:type rdf:resource="&untitled-ontology-132;Beanfits"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Honey1beanfit2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Beanfits"/>
         <rdfs:label>الشفاء في ثلاثة منها شربة عسل</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1909,8 +1642,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hot_Water -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Hot_Water">
-        <rdf:type rdf:resource="&untitled-ontology-132;Operations"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hot_Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Operations"/>
         <rdfs:label>الماء الساخن</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1918,8 +1651,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Humma3Nights -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Humma3Nights">
-        <rdf:type rdf:resource="&untitled-ontology-132;TreatmentTimes"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Humma3Nights">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentTimes"/>
         <rdfs:label>ثلاث ليالي من السحر</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1927,8 +1660,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HummaCureMethoed -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;HummaCureMethoed">
-        <rdf:type rdf:resource="&untitled-ontology-132;TreatmentMethods"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HummaCureMethoed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentMethods"/>
         <rdfs:label>يستنقع نهرا جاريا فليغتمس فيه ثلاث غمسات</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1936,8 +1669,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HummaCureTime -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;HummaCureTime">
-        <rdf:type rdf:resource="&untitled-ontology-132;TreatmentTimes"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HummaCureTime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentTimes"/>
         <rdfs:label>بعد صلاة الصبح قبل طلوع الشمس</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1945,16 +1678,16 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HummaTTimes -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;HummaTTimes">
-        <rdf:type rdf:resource="&untitled-ontology-132;TreatmentTimes"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HummaTTimes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#TreatmentTimes"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Insects_Poisons -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Insects_Poisons">
-        <rdf:type rdf:resource="&untitled-ontology-132;poisons"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Insects_Poisons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#poisons"/>
         <rdfs:label>سموم حشرات</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1962,18 +1695,18 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Insomnia -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Insomnia">
-        <rdf:type rdf:resource="&untitled-ontology-132;psychologic"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Insomnia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#psychologic"/>
+        <untitled-ontology-132:isCuredBy rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#O_God"/>
         <rdfs:label>الأرق</rdfs:label>
-        <untitled-ontology-132:isCuredBy rdf:resource="&untitled-ontology-132;O_God"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Internal_Wounds -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Internal_Wounds">
-        <rdf:type rdf:resource="&untitled-ontology-132;Wounds"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Internal_Wounds">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Wounds"/>
         <rdfs:label>جروح داخلية</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1981,8 +1714,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsGod -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;IsGod">
-        <rdf:type rdf:resource="&untitled-ontology-132;Roka"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#IsGod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Roka"/>
         <rdfs:label>أمر الله</rdfs:label>
         <rdfs:label>قدر الله</rdfs:label>
     </owl:NamedIndividual>
@@ -1991,8 +1724,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Leprosy -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Leprosy">
-        <rdf:type rdf:resource="&untitled-ontology-132;SkinDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Leprosy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#SkinDis"/>
         <rdfs:label>الجذام</rdfs:label>
         <rdfs:label>الجرب</rdfs:label>
     </owl:NamedIndividual>
@@ -2001,8 +1734,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Liver_Weakness -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Liver_Weakness">
-        <rdf:type rdf:resource="&untitled-ontology-132;Liver_Dis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Liver_Weakness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Liver_Dis"/>
         <rdfs:label>ضعف الكبد</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2010,8 +1743,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Magic -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Magic">
-        <rdf:type rdf:resource="&untitled-ontology-132;Spiritual"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Magic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Spiritual"/>
         <rdfs:label>السحر</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2019,8 +1752,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Mania -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Mania">
-        <rdf:type rdf:resource="&untitled-ontology-132;psychologic"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Mania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#psychologic"/>
         <rdfs:label>الهوس</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2028,8 +1761,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MatharaAlfam -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;MatharaAlfam">
-        <rdf:type rdf:resource="&untitled-ontology-132;Beanfits"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MatharaAlfam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Beanfits"/>
         <rdfs:label>مطهره الفم</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2037,18 +1770,18 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Mavood -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Mavood">
-        <rdf:type rdf:resource="&untitled-ontology-132;Hearts"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Mavood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Hearts"/>
+        <untitled-ontology-132:isCuredBy rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#O_God"/>
         <rdfs:label>مفؤود</rdfs:label>
-        <untitled-ontology-132:isCuredBy rdf:resource="&untitled-ontology-132;O_God"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MigraineHeadache -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;MigraineHeadache">
-        <rdf:type rdf:resource="&untitled-ontology-132;Symptoms"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MigraineHeadache">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Symptoms"/>
         <rdfs:label>صداع الشقيقة</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2056,8 +1789,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MrdattAlrab -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;MrdattAlrab">
-        <rdf:type rdf:resource="&untitled-ontology-132;Beanfits"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MrdattAlrab">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Beanfits"/>
         <rdfs:label>مرضاه الرب</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2065,8 +1798,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Neck -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Neck">
-        <rdf:type rdf:resource="&untitled-ontology-132;HumanBody"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Neck">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#HumanBody"/>
         <rdfs:label>الرقبة</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2074,20 +1807,20 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#O_God -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;O_God">
-        <rdf:type rdf:resource="&untitled-ontology-132;prayers"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#O_God">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#prayers"/>
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Magic"/>
+        <rdfs:label>ألهي</rdfs:label>
         <rdfs:label>اللهم</rdfs:label>
         <rdfs:label>يالله</rdfs:label>
-        <rdfs:label>ألهي</rdfs:label>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Magic"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Oliver_Oil -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Oliver_Oil">
-        <rdf:type rdf:resource="&untitled-ontology-132;Olive"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Oliver_Oil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Olive"/>
         <rdfs:label>زيت الزيتون</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2095,8 +1828,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Pimple -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Pimple">
-        <rdf:type rdf:resource="&untitled-ontology-132;SkinDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Pimple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#SkinDis"/>
         <rdfs:label>بثرة</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2104,8 +1837,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Pleurisy1 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Pleurisy1">
-        <rdf:type rdf:resource="&untitled-ontology-132;LungDis"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Pleurisy1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#LungDis"/>
         <rdfs:label>التهاب رئوي</rdfs:label>
         <rdfs:label>ذات الجنب</rdfs:label>
     </owl:NamedIndividual>
@@ -2114,8 +1847,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PrickThroat -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;PrickThroat">
-        <rdf:type rdf:resource="&untitled-ontology-132;Prohibition&amp;Prevention"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PrickThroat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Prohibition&amp;Prevention"/>
         <rdfs:label>النهي عن وخز حلق الصبي</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2123,18 +1856,18 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Rukia -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Rukia">
-        <rdf:type rdf:resource="&untitled-ontology-132;Roka"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Rukia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Roka"/>
+        <untitled-ontology-132:IsTypeOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInAlQadar"/>
         <rdfs:label>رقية</rdfs:label>
-        <untitled-ontology-132:IsTypeOf rdf:resource="&untitled-ontology-132;BeliefInAlQadar"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Senna -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Senna">
-        <rdf:type rdf:resource="&untitled-ontology-132;Seeds"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Senna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Seeds"/>
         <rdfs:label>السنا</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2142,8 +1875,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Sennot -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Sennot">
-        <rdf:type rdf:resource="&untitled-ontology-132;Seeds"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Sennot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Seeds"/>
         <rdfs:label>السنوت</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2151,8 +1884,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#SevenHealing -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;SevenHealing">
-        <rdf:type rdf:resource="&untitled-ontology-132;Beanfits"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#SevenHealing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Beanfits"/>
         <rdfs:label>سبعة أشفية</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2160,19 +1893,19 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Siwaak1 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Siwaak1">
-        <rdf:type rdf:resource="&untitled-ontology-132;Trees"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Siwaak1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Trees"/>
+        <untitled-ontology-132:hasBeanfit rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MatharaAlfam"/>
+        <untitled-ontology-132:hasBeanfit rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#MrdattAlrab"/>
         <rdfs:label>السواك</rdfs:label>
-        <untitled-ontology-132:hasBeanfit rdf:resource="&untitled-ontology-132;MatharaAlfam"/>
-        <untitled-ontology-132:hasBeanfit rdf:resource="&untitled-ontology-132;MrdattAlrab"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>تداووا</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2180,8 +1913,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo1 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo1">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>لكل داء دواء</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2189,8 +1922,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo2 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo2">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>ما من داء إلا أنزل له شفاء</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2198,8 +1931,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo3 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo3">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>لم ينزل داء إلا أنزل له شفاء</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2207,8 +1940,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo4 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo4">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>دواء نتداوى به</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2216,8 +1949,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo5 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo5">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>إبراد الحمى بالماء</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2225,8 +1958,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo6 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo6">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>رش الماء من السحر</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2234,8 +1967,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo7 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo7">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>تنحية الحمى بالماء البارد</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2243,8 +1976,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo8 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo8">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>الحمى قطعة من النار</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2252,8 +1985,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo9 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Tdawoo9">
-        <rdf:type rdf:resource="&untitled-ontology-132;InductionTherapy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Tdawoo9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#InductionTherapy"/>
         <rdfs:label>الاحتماء من التخم</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2261,16 +1994,16 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ulcer -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Ulcer">
-        <rdf:type rdf:resource="&untitled-ontology-132;Wounds"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ulcer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Wounds"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Wesswass -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Wesswass">
-        <rdf:type rdf:resource="&untitled-ontology-132;psychologic"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Wesswass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#psychologic"/>
         <rdfs:label>الوسواس</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2278,8 +2011,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#WoundMessenger -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;WoundMessenger">
-        <rdf:type rdf:resource="&untitled-ontology-132;Wounds"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#WoundMessenger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Wounds"/>
         <rdfs:label>جراح الرسول في أحد</rdfs:label>
         <rdfs:label>جرح النبي في أحد</rdfs:label>
     </owl:NamedIndividual>
@@ -2288,8 +2021,8 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Zamzam_Water -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;Zamzam_Water">
-        <rdf:type rdf:resource="&untitled-ontology-132;Operations"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Zamzam_Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Operations"/>
         <rdfs:label>ماء زمزم</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2297,45 +2030,43 @@
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#h123 -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;h123">
-        <rdf:type rdf:resource="&untitled-ontology-132;Hadith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#h123">
+        <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Headache1"/>
+        <untitled-ontology-132:hasArabicName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">حدثنا محمد بن مقاتل، أخبرنا عبد الله، أخبرنا حميد الطويل، عن أنس ـ رضى الله عنه ـ أنه سئل عن أجر الحجام، فقال احتجم رسول الله صلى الله عليه وسلم حجمه أبو طيبة، وأعطاه صاعين من طعام، وكلم مواليه فخففوا عنه، وقال ‏&quot;‏ إن أمثل ما تداويتم به الحجامة والقسط البحري ‏&quot;‏‏.‏ وقال ‏&quot;‏ لا تعذبوا صبيانكم بالغمز من العذرة، وعليكم بالقسط ‏&quot;‏‏.‏</untitled-ontology-132:hasArabicName>
         <rdfs:label>الحجامة</rdfs:label>
-        <untitled-ontology-132:hasArabicName rdf:datatype="&xsd;string">حدثنا محمد بن مقاتل، أخبرنا عبد الله، أخبرنا حميد الطويل، عن أنس ـ رضى الله عنه ـ أنه سئل عن أجر الحجام، فقال احتجم رسول الله صلى الله عليه وسلم حجمه أبو طيبة، وأعطاه صاعين من طعام، وكلم مواليه فخففوا عنه، وقال ‏&quot;‏ إن أمثل ما تداويتم به الحجامة والقسط البحري ‏&quot;‏‏.‏ وقال ‏&quot;‏ لا تعذبوا صبيانكم بالغمز من العذرة، وعليكم بالقسط ‏&quot;‏‏.‏</untitled-ontology-132:hasArabicName>
-        <untitled-ontology-132:cures rdf:resource="&untitled-ontology-132;Headache1"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <rdfs:label rdf:resource="&rdfs;label"/>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">حدثنا محمد بن مقاتل، أخبرنا عبد الله، أخبرنا حميد الطويل، عن أنس ـ رضى الله عنه ـ أنه سئل عن أجر الحجام، فقال احتجم رسول الله صلى الله عليه وسلم حجمه أبو طيبة، وأعطاه صاعين من طعام، وكلم مواليه فخففوا عنه، وقال ‏&quot;‏ إن أمثل ما تداويتم به الحجامة والقسط البحري ‏&quot;‏‏.‏ وقال ‏&quot;‏ لا تعذبوا صبيانكم بالغمز من العذرة، وعليكم بالقسط ‏&quot;‏‏.‏</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&untitled-ontology-132;h123"/>
-        <owl:annotatedProperty rdf:resource="&untitled-ontology-132;hasArabicName"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#h123"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hasArabicName"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">حدثنا محمد بن مقاتل، أخبرنا عبد الله، أخبرنا حميد الطويل، عن أنس ـ رضى الله عنه ـ أنه سئل عن أجر الحجام، فقال احتجم رسول الله صلى الله عليه وسلم حجمه أبو طيبة، وأعطاه صاعين من طعام، وكلم مواليه فخففوا عنه، وقال ‏&quot;‏ إن أمثل ما تداويتم به الحجامة والقسط البحري ‏&quot;‏‏.‏ وقال ‏&quot;‏ لا تعذبوا صبيانكم بالغمز من العذرة، وعليكم بالقسط ‏&quot;‏‏.‏</owl:annotatedTarget>
+        <rdfs:label rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:Axiom>
     
 
 
     <!-- http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#quran -->
 
-    <owl:NamedIndividual rdf:about="&untitled-ontology-132;quran">
-        <rdf:type rdf:resource="&untitled-ontology-132;Resources"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#quran">
         <rdfs:label>القرآن</rdfs:label>
     </owl:NamedIndividual>
-    <rdf:Description>
-        <rdfs:label>الحجامة</rdfs:label>
-    </rdf:Description>
     <owl:Axiom>
-        <rdfs:label rdf:resource="&untitled-ontology-132;Cupping1"/>
-        <owl:annotatedTarget rdf:resource="&untitled-ontology-132;hadith12"/>
-        <owl:annotatedProperty rdf:resource="&rdfs;label"/>
         <owl:annotatedSource>
             <rdf:Description>
-                <rdfs:label rdf:resource="&untitled-ontology-132;hadith12"/>
+                <rdfs:label rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hadith12"/>
             </rdf:Description>
         </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#hadith12"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cupping1"/>
     </owl:Axiom>
     <rdf:Description>
         <rdfs:label>الأدوية التي تعالج المرض</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>الأدوية التي تعالج المرض</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>الحجامة</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>الأدوية التي تعالج المرض</rdfs:label>
@@ -2351,12 +2082,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="&xsd;byte">
+    <rdf:Description rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ulcer">
+        <rdfs:label>القرحة</rdfs:label>
+        <rdfs:label>جرح</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#byte">
         <rdfs:label>الحبة السوداء</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
