@@ -72,7 +72,6 @@ public class IndexingImpl {
             }
         }
         storeTermsInDB();
-        System.out.println("Done...");
     }
 
     private static long getDocDID(Path filePath) {

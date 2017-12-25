@@ -50,7 +50,10 @@ public class SearchImpl {
 
             hadiths = retrieveRelatedIndexedHadiths(session, qwords);
         }
-        hadiths.forEach(System.out::println);
+        if (hadiths.isEmpty()) {
+            System.out.println("لا توجد نتائج");
+        }
+        hadiths.forEach(h -> System.out.printf("%s\n%n", h));
 
         session.close();
     }
