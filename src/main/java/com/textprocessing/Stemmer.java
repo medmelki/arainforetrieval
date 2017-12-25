@@ -55,25 +55,25 @@ public class Stemmer {
         fromSuffixes = false;
         rootNotFound = false;
         staticFiles = new Vector<Vector<String>>();
-        if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "definite_article.txt").toString()))
-            if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "duplicate.txt").toString()))
-                if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "first_waw.txt").toString()))
-                    if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "first_yah.txt").toString()))
-                        if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "last_alif.txt").toString()))
-                            if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "last_hamza.txt").toString()))
-                                if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "last_maksoura.txt").toString()))
-                                    if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "last_yah.txt").toString()))
-                                        if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "mid_waw.txt").toString()))
-                                            if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "mid_yah.txt").toString()))
-                                                if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "prefixes.txt").toString()))
-                                                    if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "punctuation.txt").toString()))
-                                                        if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "quad_roots.txt").toString()))
-                                                            if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "stopwords.txt").toString()))
-                                                                if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "suffixes.txt").toString()))
-                                                                    if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "tri_patt.txt").toString()))
-                                                                        if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "tri_roots.txt").toString()))
-                                                                            if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "diacritics.txt").toString()))
-                                                                                if (addVectorFromFile(new StringBuffer(pathToStemmerFiles + "strange.txt").toString())) {
+        if (addVectorFromFile(pathToStemmerFiles + "definite_article.txt"))
+            if (addVectorFromFile(pathToStemmerFiles + "duplicate.txt"))
+                if (addVectorFromFile(pathToStemmerFiles + "first_waw.txt"))
+                    if (addVectorFromFile(pathToStemmerFiles + "first_yah.txt"))
+                        if (addVectorFromFile(pathToStemmerFiles + "last_alif.txt"))
+                            if (addVectorFromFile(pathToStemmerFiles + "last_hamza.txt"))
+                                if (addVectorFromFile(pathToStemmerFiles + "last_maksoura.txt"))
+                                    if (addVectorFromFile(pathToStemmerFiles + "last_yah.txt"))
+                                        if (addVectorFromFile(pathToStemmerFiles + "mid_waw.txt"))
+                                            if (addVectorFromFile(pathToStemmerFiles + "mid_yah.txt"))
+                                                if (addVectorFromFile(pathToStemmerFiles + "prefixes.txt"))
+                                                    if (addVectorFromFile(pathToStemmerFiles + "punctuation.txt"))
+                                                        if (addVectorFromFile(pathToStemmerFiles + "quad_roots.txt"))
+                                                            if (addVectorFromFile(pathToStemmerFiles + "stopwords.txt"))
+                                                                if (addVectorFromFile(pathToStemmerFiles + "suffixes.txt"))
+                                                                    if (addVectorFromFile(pathToStemmerFiles + "tri_patt.txt"))
+                                                                        if (addVectorFromFile(pathToStemmerFiles + "tri_roots.txt"))
+                                                                            if (addVectorFromFile(pathToStemmerFiles + "diacritics.txt"))
+                                                                                if (addVectorFromFile(pathToStemmerFiles + "strange.txt")) {
                                                                                     //System.out.println( "Dictionaries have been read successfully" );
                                                                                 }
     }

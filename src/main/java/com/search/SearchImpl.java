@@ -33,18 +33,34 @@ public class SearchImpl {
         query = TextUtility.removePunctuations(query);
         Stemmer stemmer = new Stemmer();
         List<String> words = TextUtility.tokenize(query);
-        words = TextUtility.removeStopWords(words);
-        words = words.stream()
-                .map(stemmer::findRoot)
-                .collect(Collectors.toList());
         Session session = HibernateUtil.getSession();
-        List<String> qwords = termExpansion(words);
+        // search as a bag of words
+        List<String> hadiths;
+        do {
+            hadiths = retrieveRelatedIndexedHadithsByQuery(session, buildQuery(words));
+            words.remove(0);
+        } while (words.size() > 0 && hadiths.isEmpty());
+        // search with stemmed qwords
+        if (hadiths.isEmpty()) {
+            words = TextUtility.removeStopWords(words);
+            words = words.stream()
+                    .map(stemmer::findRoot)
+                    .collect(Collectors.toList());
+            List<String> qwords = termExpansion(words);
 
-        List<String> hadiths = retrieveRelatedIndexedHadiths(session, qwords);
-
+            hadiths = retrieveRelatedIndexedHadiths(session, qwords);
+        }
         hadiths.forEach(System.out::println);
+
         session.close();
-        System.out.println("\nDone...");
+    }
+
+    private static String buildQuery(List<String> words) {
+        StringBuilder sb = new StringBuilder();
+        for (String word : words) {
+            sb.append(word).append(" ");
+        }
+        return sb.toString().trim();
     }
 
     private static List<String> termExpansion(List<String> words) {
@@ -57,7 +73,6 @@ public class SearchImpl {
 
     private static List<String> retrieveRelatedIndexedHadiths(Session session, List<String> qwords) {
 
-        // retrieve related indexed hadith by fuzzy search
         FullTextSession fullTextSession = Search.getFullTextSession(session);
 
         List<HadithTerm> hadithTerms = new ArrayList<>();
@@ -94,6 +109,36 @@ public class SearchImpl {
         return hadiths;
     }
 
+    private static List<String> retrieveRelatedIndexedHadithsByQuery(Session session, String query) {
+
+        FullTextSession fullTextSession = Search.getFullTextSession(session);
+
+        List<HadithTerm> hadithTerms = new ArrayList<>();
+        Set<Long> docIndexesInSahih = new LinkedHashSet<>();
+        hadithTerms.addAll(HadithSearch.getExactHadithTerms(query, fullTextSession));
+
+        // filter unique docDIDs
+        for (HadithTerm hadithTerm : hadithTerms) {
+            docIndexesInSahih.add(HadithIndexUtil.getIndexInSahih(hadithTerm.getDIDdoc()));
+        }
+
+
+        StringBuilder hadithContent = new StringBuilder();
+        // read hadith txt
+        try (BufferedReader br = Files.newBufferedReader(Paths.get("hadith/hadith.txt"))) {
+            br.lines().forEach(hadithContent::append);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        List<String> hadiths = new ArrayList<>();
+        for (Long index : docIndexesInSahih) {
+            hadiths.add(hadithContent.substring(hadithContent.indexOf(index.toString()),
+                    hadithContent.indexOf(Long.toString(index + 1))));
+        }
+        return hadiths;
+    }
+
     private static OntTerm reasoning(String w) {
         OntDictionary dictionary = null;
         try {
@@ -108,8 +153,42 @@ public class SearchImpl {
     }
 
     public static void main(String[] args) {
+//        String[] inputs = new String[20];
+//        inputs[0] = "الحث على المداوة.";
+//        inputs[1] = "علاج الصداع.";
+//        inputs[2] = "نهي سب الحمى.";
+//        inputs[3] = "علاج الالتهاب الرئوي.";
+//        inputs[4] = "أهمية السواك.";
+//        inputs[5] = "نهي تعذيب الأولاد.";
+//        inputs[6] = "مداواة روحانية.";
+//        inputs[7] = "العلاج بالماء.";
+//        inputs[8] = "تقرحات الجلد.";
+//        inputs[0] = "الحجامة.";
+//        inputs[1] = "الحث على المداوة.";
+//        inputs[2] = "علاج الحمى.";
+//        inputs[3] = "أمراض تعالج بالحناء.";
+//        inputs[4] = "التداوي بأمر الله.";
+//        inputs[5] = "فوائد العسل.";
+//        inputs[6] = "الأجرة على الحجامة.";
+//        inputs[7] = "علاج الصداع.";
+//        inputs[8] = "نهي سب الحمى.";
+//        inputs[9] = "علاج الالتهاب الرئوي.";
+//        inputs[10] = "أهمية السواك.";
+//        inputs[11] = "نهي تعذيب الأولاد.";
+//        inputs[12] = "الرقية من الوجع.";
+//        inputs[13] = "مداواة روحانية.";
+//        inputs[14] = "الوقاية من السحر.";
+//        inputs[15] = "الأدوية الوقائية.";
+//        inputs[16] = "أمراض الجسم.";
+//        inputs[17] = "العلاج بالماء.";
+//        inputs[18] = "أنواع الأدوية الطبيعية.";
+//        inputs[19] = "تقرحات الجلد.";
+//        for (String input : inputs) {
+//            System.out.printf("Results for %s : %n", input);
+//            search(input);
+//            System.out.printf("%n%n");
+//        }
         search("فوائد العسل");
-//        search("أجرة الحجامة");
-//        search("الأدوية الوقائية");
+        System.out.println("\nDone...");
     }
 }

@@ -3,6 +3,7 @@ package com.ontology.search;
 import com.ontology.Config;
 import com.ontology.rdfstore.IRDFStore;
 import com.textprocessing.Stemmer;
+import com.textprocessing.util.TextUtility;
 import org.apache.jena.ontology.Individual;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
@@ -35,7 +36,7 @@ public class OntDictionary {
         List<OntTerm> allTerms = new ArrayList<OntTerm>();
         allTerms.addAll(getAllCategories());
         allTerms.addAll(getAllIndividuals());
-        allTerms.addAll(getAllProperties());
+//        allTerms.addAll(getAllProperties());
         return allTerms;
     }
 
@@ -52,9 +53,15 @@ public class OntDictionary {
                 cat.setStem(OntDictionary.stemmer.findRoot(subClass.getLocalName()));
                 List<String> labels = this.getLabels(subClass);
                 if (labels != null) {
-                    List<String> stemmedLabels = new ArrayList<String>();
-                    for (String label : labels)
-                        stemmedLabels.add(OntDictionary.stemmer.findRoot(label));
+                    List<String> stemmedLabels = new ArrayList<>();
+                    for (String label : labels) {
+                        label = TextUtility.removePunctuations(label);
+                        List<String> tokens = TextUtility.tokenize(label);
+                        tokens = TextUtility.removeStopWords(tokens);
+                        for (String token : tokens) {
+                            stemmedLabels.add(OntDictionary.stemmer.findRoot(token));
+                        }
+                    }
                     cat.setSynonyms(stemmedLabels);
                 }
                 categories.add(cat);
@@ -76,9 +83,16 @@ public class OntDictionary {
                 hInd.setStem(OntDictionary.stemmer.findRoot(i.getLocalName()));
                 List<String> labels = this.getLabels(i);
                 if (labels != null) {
-                    List<String> stemmedLabels = new ArrayList<String>();
-                    for (String label : labels)
-                        stemmedLabels.add(OntDictionary.stemmer.findRoot(label));
+                    List<String> stemmedLabels = new ArrayList<>();
+                    for (String label : labels) {
+                        label = TextUtility.removePunctuations(label);
+                        List<String> tokens = TextUtility.tokenize(label);
+                        tokens = TextUtility.removeStopWords(tokens);
+                        for (String token : tokens) {
+                            stemmedLabels.add(OntDictionary.stemmer.findRoot(token));
+                            stemmedLabels.add(token);
+                        }
+                    }
                     hInd.setSynonyms(stemmedLabels);
                 }
                 inds.add(hInd);

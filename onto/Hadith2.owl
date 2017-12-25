@@ -392,6 +392,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Curative_medicine">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Remedies"/>
         <rdfs:label>الأدوية الطبيعية</rdfs:label>
+        <rdfs:label>أنواع الأدوية الطبيعية</rdfs:label>
         <rdfs:label>الطب العلاجي</rdfs:label>
     </owl:Class>
     
@@ -686,6 +687,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Remedies"/>
         <rdfs:label>الأدوية الوقائية</rdfs:label>
         <rdfs:label>الطب الوقائي</rdfs:label>
+        <rdfs:label>الوقاية</rdfs:label>
     </owl:Class>
     
 
@@ -869,6 +871,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Operations"/>
         <rdfs:label>الماء</rdfs:label>
         <rdfs:label>ماء</rdfs:label>
+        <rdfs:label>بالماء</rdfs:label>
     </owl:Class>
     
 
@@ -1006,6 +1009,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Prohibition&amp;Prevention">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#category"/>
+        <rdfs:label>منع</rdfs:label>
+        <rdfs:label>نهي</rdfs:label>
         <rdfs:label>نهي ومنع</rdfs:label>
     </owl:Class>
     
@@ -1560,6 +1565,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Symptoms"/>
         <rdfs:label>الصداع</rdfs:label>
         <rdfs:label>وجع في الرأس</rdfs:label>
+        <rdfs:label>شقيقة</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1571,6 +1577,11 @@
         <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Headache1"/>
         <untitled-ontology-132:cures rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Ulcer"/>
         <rdfs:label>الحناء</rdfs:label>
+        <rdfs:label>حناء</rdfs:label>
+        <rdfs:label>حناء</rdfs:label>
+        <rdfs:label>حنَّاء</rdfs:label>
+        <rdfs:label>الحنَّاء</rdfs:label>
+        <rdfs:label>بالحناء</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1840,6 +1851,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Pleurisy1">
         <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#LungDis"/>
         <rdfs:label>التهاب رئوي</rdfs:label>
+        <rdfs:label>الالتهاب الرئوي</rdfs:label>
+        <rdfs:label>علاج الالتهاب الرئوي</rdfs:label>
         <rdfs:label>ذات الجنب</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1850,6 +1863,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#PrickThroat">
         <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Prohibition&amp;Prevention"/>
         <rdfs:label>النهي عن وخز حلق الصبي</rdfs:label>
+        <rdfs:label>النهي عن وخز حلق الولد</rdfs:label>
+        <rdfs:label>النهي عن وخز حلق الصبية</rdfs:label>
+        <rdfs:label>النهي عن وخز حلق الأولاد</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1860,6 +1876,8 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Roka"/>
         <untitled-ontology-132:IsTypeOf rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#BeliefInAlQadar"/>
         <rdfs:label>رقية</rdfs:label>
+        <rdfs:label>الرقية</rdfs:label>
+        <rdfs:label>الرقية من الوجع</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2060,13 +2078,13 @@
         <rdfs:label rdf:resource="http://www.semanticweb.org/iyad32/ontologies/2014/6/untitled-ontology-13.owl#Cupping1"/>
     </owl:Axiom>
     <rdf:Description>
-        <rdfs:label>الأدوية التي تعالج المرض</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>الأدوية التي تعالج المرض</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
         <rdfs:label>الحجامة</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>الأدوية التي تعالج المرض</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>الأدوية التي تعالج المرض</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>الأدوية التي تعالج المرض</rdfs:label>

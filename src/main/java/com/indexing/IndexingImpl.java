@@ -97,6 +97,9 @@ public class IndexingImpl {
     private static void storeIndexes(String word, List<OntTerm> ontTerms, long docDID) {
         for (OntTerm term : ontTerms) {
             hadithTerms.add(new HadithTerm(docDID, word, term.getName()));
+            for (String synonym : term.getSynonyms()) {
+                hadithTerms.add(new HadithTerm(docDID, word, synonym));
+            }
         }
     }
 
